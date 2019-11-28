@@ -786,7 +786,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\..\NANOVNA_STM32_F072\ch.icf</state>
+                    <state>$PROJ_DIR$\..\NANOVNA_STM32_F072\STM32F072xB.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1832,7 +1832,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\..\NANOVNA_STM32_F072\ch.icf</state>
+                    <state>$PROJ_DIR$\..\NANOVNA_STM32_F072\STM32F072xB.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2364,7 +2364,7 @@
                 <name>$PROJ_DIR$\..\NANOVNA_STM32_F072\board.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\NANOVNA_STM32_F072\ch.icf</name>
+                <name>$PROJ_DIR$\..\NANOVNA_STM32_F072\STM32F072xB.icf</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\NANOVNA_STM32_F072\flash_config.c</name>
