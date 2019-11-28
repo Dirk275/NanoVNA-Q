@@ -106,7 +106,7 @@ include $(CHIBIOS)/os/various/shell/shell.mk
 
 # Define linker script file here
 #LDSCRIPT= $(STARTUPLD)/STM32F072xB.ld
-LDSCRIPT= STM32F072xB.ld
+LDSCRIPT= NANOVNA_STM32_F072/STM32F072xB.ld
 
 # C sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
