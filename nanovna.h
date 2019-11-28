@@ -193,7 +193,7 @@ typedef struct {
 } trace_t;
 
 typedef struct {
-    int32_t magic;
+    uint32_t magic;
     uint16_t dac_value;
     uint16_t grid_color;
     uint16_t menu_normal_color;
@@ -304,10 +304,10 @@ void ili9341_line(int x0, int y0, int x1, int y1, uint16_t fg);
 #define SAVEAREA_MAX    5
 
 typedef struct {
-  int32_t magic;
+  uint32_t magic;
   int32_t _frequency0; // start or center
   int32_t _frequency1; // stop or span
-  int16_t _sweep_points;
+  uint16_t _sweep_points;
   uint16_t _cal_status;
 
   uint32_t _frequencies[POINT_COUNT];

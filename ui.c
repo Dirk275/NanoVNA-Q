@@ -133,7 +133,7 @@ static void ui_mode_menu(void);
 static void ui_mode_numeric(int _keypad_mode);
 static void ui_mode_keypad(int _keypad_mode);
 static void draw_menu(void);
-static void leave_ui_mode();
+static void leave_ui_mode(void);
 static void erase_menu_buttons(void);
 static void ui_process_keypad(void);
 static void ui_process_numeric(void);
@@ -1473,7 +1473,7 @@ static void erase_numeric_input(void)
   ili9341_fill(0, 240-32, 320, 32, bg);
 }
 
-static void leave_ui_mode()
+static void leave_ui_mode(void)
 {
   if (ui_mode == UI_MENU) {
     request_to_draw_cells_behind_menu();

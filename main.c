@@ -45,7 +45,7 @@ static void apply_error_term_at(int i);
 static void apply_edelay_at(int i);
 static void cal_interpolate(int s);
 static void update_frequencies(void);
-static void set_frequencies(uint32_t start, uint32_t stop, int16_t points);
+static void set_frequencies(uint32_t start, uint32_t stop, uint16_t points);
 static bool sweep(bool break_on_operation);
 
 mutex_t mutex_sweep;
@@ -863,7 +863,7 @@ static void update_marker_index(void)
   }
 }
 
-static void set_frequencies(uint32_t start, uint32_t stop, int16_t points)
+static void set_frequencies(uint32_t start, uint32_t stop, uint16_t points)
 {
   chMtxLock(&mutex_sweep);
   uint32_t i;

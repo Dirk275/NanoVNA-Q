@@ -1610,13 +1610,12 @@ static uint8_t v2p[] = {
 // convert vbat [mV] to battery percent
 uint8_t vbat2percent(int16_t vbat)
 {
-    int i, v;
     if (vbat < 3000) 
         return 0;
-    v = (vbat - 3000 + 5) / 10;
+    int32_t v = (vbat - 3000 + 5) / 10;
     if (v < v2p[0])
         return 0;
-    for (i=0; i < sizeof(v2p)-1; i++) {
+    for (uint32_t i=0; i < sizeof(v2p)-1; i++) {
         if (v < v2p[i+1]) {
             return i*5 + 5*((vbat-3000) - v2p[i]*10)/(v2p[i+1]*10 - v2p[i]*10);
         }
