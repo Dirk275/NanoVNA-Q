@@ -62,6 +62,7 @@ const PALConfig pal_default_config = {
 };
 #endif
 
+
 #if defined(__ICCARM__)
 volatile __no_init uint32_t dfu_reset_to_bootloader_magic;
 #else
@@ -77,7 +78,11 @@ void __early_init(void) {
     if (dfu_reset_to_bootloader_magic == BOOTLOADER_MAGIC_KEYWORD) {
         dfu_reset_to_bootloader_magic = 0;
         void (*bootloader)(void) = (void (*)(void)) (*((uint32_t *) SYSMEM_RESET_VECTOR));
-        __set_MSP(0x20002250);
+        //__set_MSP(*(uint32_t*)0);
+        __asm volatile (
+            "MOVS   R1,#0\n\t"
+            "LDR    R1,[R1]\n\t"
+            "MSR    MSP,R1");
         __enable_irq();
         // remap memory. unneeded for F072?
         // RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;

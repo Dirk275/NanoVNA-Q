@@ -216,7 +216,7 @@
                 <option>
                     <name>CCDefines</name>
                     <state>ARM_MATH_CM0</state>
-                    <state>M_PI=3.14159265358979323846</state>
+                    <state>M_PI=3.1415926535897932384626433832795</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1262,7 +1262,7 @@
                     <name>CCDefines</name>
                     <state>NDEBUG</state>
                     <state>ARM_MATH_CM0</state>
-                    <state>M_PI=3.14159265358979323846</state>
+                    <state>M_PI=3.1415926535897932384626433832795</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
