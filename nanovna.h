@@ -26,12 +26,12 @@
 
 
 //#define __DUMP_CMD__
-//#define __SCANRAW_CMD__
-//#define __COLOR_CMD__
-//#define __USE_STDIO__
+#define __SCANRAW_CMD__
+#define __COLOR_CMD__
 
 
 #if defined(__ICCARM__)
+    #define __USE_STDIO__
     #define __USE_ATOF__
 #endif //defined(__ICCARM__)
 
